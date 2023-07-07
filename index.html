@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trapp News</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/x-icon" href="assets/Trapp_News-removebg-preview.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="main-nav container flex">
+
+            <a href="#" class="logo">
+                <img id="india" onclick="reload()" src="./assets/Trapp_News-removebg-preview.png">
+            </a>
+
+            <div class="nav-links">
+                <ul class="flex">
+                    <li class="hover-link nav-items" id="sports" onclick="onNavItemClick('sports')">Sports</li>
+                    <li class="hover-link nav-items" id="technology" onclick="onNavItemClick('technology')">Technology</li>
+                    <li class="hover-link nav-items" id="education" onclick="onNavItemClick('education')">Education</li>
+                    <li class="hover-link nav-items" id="science" onclick="onNavItemClick('science')">Science</li>
+                    <li class="hover-link nav-items" id="finance" onclick="onNavItemClick('finance')">Finance</li>
+                    <li class="hover-link nav-items" id="anime" onclick="onNavItemClick('anime')">Anime</li>
+                    <li class="hover-link nav-items" id="movies" onclick="onNavItemClick('movies')">Movies</li>
+                    <li class="hover-link nav-items" id="history" onclick="onNavItemClick('history')">History</li>
+                </ul>
+            </div>
+
+            <div class="search-bar flex">
+                <input type="text" id="search-text" class="news-input" placeholder="e.g. Science">
+                <button class="search-button" id="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+
+        </div>
+    </nav>
+
+    <main>
+        <div class="cards-container flex container " id="cards-container">
+
+        </div>
+    </main>
+
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://placeholder.com/400x200" alt="" id="news-img">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title">This is the title</h3>
+                <h6 class="news-source" id="news-source">End Gadget 26/04/23</h6>
+                <p class="news-desc" id="news-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+                    laborum ipsum assumenda tenetur, suscipit odio laboriosam nulla. Non, ad saepe.</p>
+            </div>
+        </div>
+    </template>
+    <script src="script.js"></script>
+</body>
+
+</html>
